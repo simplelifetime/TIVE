@@ -1,22 +1,16 @@
-## Less is More: Data Value Estimation for Visual Instruction Tuning
+## Less is More: High-value Data Selection for Visual Instruction Tuning
 
-This repo provides the source code & data of our paper: [Less is More: Data Value Estimation for Visual Instruction Tuning](https://arxiv.org/abs/2403.09559).
+This repo provides the source code & data of our paper: [Less is More: High-value Data Selection for Visual Instruction Tuning](https://arxiv.org/abs/2403.09559).
 
-<!-- ```bibtex
-@article{Li-HADES-2024,
-  author       = {Yifan Li and Hangyu Guo and Kun Zhou and Wayne Xin Zhao and Ji{-}Rong Wen},
-  title        = {Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models},
-  journal      = {CoRR},
-  volume       = {abs/2403.09792},
-  year         = {2024}
-}
-``` -->
 
 ## Overview
 
-In this paper, we study the harmlessness alignment problem of multimodal large language models (MLLMs). We conduct a systematic empirical analysis of the harmlessness performance of representative MLLMs and reveal that the image input poses the alignment vulnerability of MLLMs. Inspired by this, we propose a novel jailbreak method named **HADES**, which hides and amplifies the harmfulness of the malicious intent within the text input, using meticulously crafted images. Experimental results show that HADES can effectively jailbreak existing MLLMs, which achieves an average Attack Success Rate (ASR) of 90.26% for LLaVA-1.5 and 71.60% for Gemini Pro Vision.
+In this paper, we study the redundancy issue within the current visual instruction datasets. We conduct a series of empirical studies which reveals a significant redundancy within the visual instruction datasets, and show that greatly reducing the amount of instructions from several tasks even do not affect the performance. Based on the findings,
+we propose a high-value data selection approach TIVE, to eliminate redundancy within the visual instruction data and reduce the training cost. Experiments on various LVLMs (Large Vision-Language Models) show that our approach using only about 15% data can achieve comparable average performance to the full-data fine-tuned model across eight benchmarks, even surpassing it on four of the benchmarks.
 
-![model_figure](./figs/hades.jpg)
+![model_figure](./figs/image.png)
+
+![performance_figure](./figs/image2.png)
 
 ## Installation
 1. Install LLaVA
